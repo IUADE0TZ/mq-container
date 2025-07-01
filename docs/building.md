@@ -47,6 +47,19 @@ MQ_ARCHIVE=mq-1.2.3.4.tar.gz MQ_VERSION=1.2.3.4 make build-advancedserver
 ```
 
 ## Building a developer image
+### Preparation
+```shell
+ docker pull harbor.avalaunch.aval/redhat-proxy/ubi9/go-toolset:1.23.9-1749052980
+```
+```shell
+docker tag harbor.avalaunch.aval/redhat-proxy/ubi9/go-toolset:1.23.9-1749052980 registry.access.redhat.com/ubi9/go-toolset:1.23.9-1749052980 
+```
+```shell
+docker pull harbor.avalaunch.aval/redhat-proxy/ubi9/ubi-minimal:9.6-1747218906
+```
+```shell
+docker tag harbor.avalaunch.aval/redhat-proxy/ubi9/ubi-minimal:9.6-1747218906 registry.access.redhat.com/ubi9/ubi-minimal:9.6-1747218906
+```
 
 Run `make build-devserver`, which will download the latest version of MQ Advanced for Developers.  This is available on the `amd64` and `arm64` (Apple Silicon) architectures.
 
